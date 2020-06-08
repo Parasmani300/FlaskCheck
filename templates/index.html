@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+    href={{url_for('static',filename='css/bootstrap.min.css')}}/>
+    <title>Index</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-body">
+        <form class="row" action="" method="POST">
+          <div class="form-group col-4">
+            <input
+              class="form-control"
+              type="text"
+              name="username"
+              placeholder="username"
+            />
+          </div>
+          <div class="form-group col-4">
+            <input
+              class="form-control"
+              type="text"
+              name="password"
+              placeholder="password"
+            />
+          </div>
+          <div class="form-group col-4">
+            <input type="submit" class="btn btn-primary" name="Login" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div>
+      {% if pl %}
+      <p>{{pl}}</p>
+      <p>{{p2}}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
